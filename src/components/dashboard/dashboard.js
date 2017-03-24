@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
-import Header from '../header';
-import Footer from '../footer';
+import Header from './containers/header';
+import Footer from './containers/footer';
 
 const propTypes = {
     propTypes
@@ -21,7 +21,7 @@ class Dashboard extends Component {
         return (
             <div>
                 <Header />
-                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h1>
+                <h1>Body</h1>
                 <Footer />
             </div>
         )
