@@ -19,7 +19,6 @@ class Header extends Component {
     render() {
         return (
             <div>
-                <h1>Header</h1>
                 <ul>
                     <li className="li-item"> 
                         <Link to="/">Home</Link>
@@ -28,7 +27,7 @@ class Header extends Component {
                         <Link to="/about">About</Link>
                     </li>
                     <li className="li-item"> 
-                        <Link to="/contacts">Contact</Link>
+                        <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
             </div>

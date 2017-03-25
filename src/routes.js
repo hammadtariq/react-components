@@ -2,16 +2,18 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import Home from './components/dashboard/containers/home.js';
 import About from './components/dashboard/containers/about.js';
-import Contacts from './components/dashboard/containers/contact.js';
+import Header from './components/dashboard/containers/header.js';
+import Contact from './components/dashboard/containers/contact';
 import Dashboard from './components/dashboard/dashboard';
 
 const Routes = () => (
     <Router>
         <div>
-            <Dashboard />
+            <Header/>
             <Route exact path="/" component={Home} />
+            <Route path="/dashboard" component={Dashboard} />
             <Route path="/about" component={About} />
-            <Route path="/contacts" component={Contacts} />
+            <Route path="/contact" component={Contact} />
         </div>
     </Router>
 )

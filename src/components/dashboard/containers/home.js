@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react'
+import Header from './header'
+import Footer from './footer'
 
 const propTypes = {
     propTypes

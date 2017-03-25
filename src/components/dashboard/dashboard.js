@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Header from './containers/header';
 import Footer from './containers/footer';
+import Routes from '../../routes';
 
 const propTypes = {
     propTypes
@@ -20,8 +21,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div>
-                <Header />
-                <h1>Body</h1>
+                <Routes />
                 <Footer />
             </div>
         )
