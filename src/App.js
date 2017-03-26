@@ -1,21 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import AppBar from 'material-ui/AppBar';
+import SidebarExample from './sideNav/sideNav';
+
+
 import './App.css';
-import Routes from './routes';
-import Dashboard from './components/dashboard/dashboard';
 
 class App extends Component {
+  componentDidMount(){
+    fetch('https://api.github.com/gists')
+    .then(res => res.json())
+    .then(result => result)
+    
+  }  
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <Dashboard />
+        <MuiThemeProvider muiTheme={ getMuiTheme(darkBaseTheme)} >
+    <AppBar title="My AppBar" />
+  </MuiThemeProvider>
+        <SidebarExample/>
+        
       </div>
     );
   }
 }
-
+// <Routes/>
 export default App;
