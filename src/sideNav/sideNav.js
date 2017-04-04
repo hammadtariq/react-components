@@ -1,11 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import Lists from '../list';
 import routesList from '../routesList';
-
 import {
-  BrowserRouter as Router,
-  Route
- } from 'react-router-dom'
+    BrowserRouter as Router,
+    Route
+} from 'react-router-dom'
 
 const propTypes = {
     propTypes
@@ -21,21 +20,20 @@ class Sidenav extends Component {
         this.state = {
         }
     }
- render() {
+    render() {
         return (
             <Router>
-            <div>
-             <Lists />
-            {routesList.map((route, index) => (
-            <Route
-
-            key={index}
-            path={route.path}
-            exact={route.exact}
-            component={route.main}
-            />
-        ))}
-            </div>
+                <div>
+                    <Lists />
+                    {routesList.map((route, index) => (
+                        <Route
+                            key={index}
+                            path={route.path}
+                            exact={route.exact}
+                            component={route.main}
+                        />
+                    ))}
+                </div>
             </Router>
         )
     }

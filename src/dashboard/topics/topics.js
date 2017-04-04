@@ -21,7 +21,7 @@ class Topics extends Component {
     render() {
         return (
             <div>
-                <h1>Topic Topic</h1>
+                <h1>Topics</h1>
             </div>
         )
     }
